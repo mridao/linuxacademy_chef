@@ -13,7 +13,4 @@ service 'apache2' do
 	action [:start, :enable]
 end
 
-file 'default www' do
-	path '/var/www/html/index.html'
-	content 'Hello World!'
-end
+include_recipe 'apache::websites'
